@@ -266,7 +266,7 @@ img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: url(/../img/background/bg-app.webp);
+  background: url("/../img/background/bg-app.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
