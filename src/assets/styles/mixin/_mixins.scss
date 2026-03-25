@@ -1,0 +1,33 @@
+@mixin transition($property: all, $duration: 0.3s, $timing-function: linear) {
+  transition: $property $duration $timing-function;
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin textClip($bg: $dark, $fallbackColor: $light) {
+  display: inline-block;
+  color: $fallbackColor;
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background: $bg;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-box-decoration-break: clone;
+  }
+
+  &:before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    text-shadow: 0 2px 0 rgba($dark, 0.5);
+    margin: 0;
+  }
+}

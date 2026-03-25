@@ -1,0 +1,238 @@
+.content {
+  width: 100%;
+  overflow: hidden;
+  @include _768 {
+    padding: 0px 0 40px;
+  }
+  @include _1024 {
+    padding-bottom: 158px;
+  }
+  @include _1440 {
+    max-width: 1276px;
+    margin: 0 auto;
+    padding: 0px 0 20px;
+    overflow: visible;
+  }
+  @include _1920 {
+    max-width: 1666px;
+    padding-bottom: 345px;
+  }
+
+  .aviator {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 24px;
+
+    @include _540 {
+      margin-top: 32px;
+    }
+    @include _768 {
+      margin-top: 72px;
+    }
+
+    @include _1024 {
+      flex-direction: row;
+      margin-bottom: 40px;
+      margin-top: 100px;
+      justify-content: space-between;
+    }
+    @include _1440 {
+      margin-top: 136px;
+    }
+    @include _1920 {
+      margin-top: 164px;
+    }
+    &__rope {
+      width: min-content;
+      position: relative;
+
+      &First,
+      &Second {
+        position: absolute;
+        width: 6px;
+        top: -80px;
+        @include _540 {
+          width: 10px;
+        }
+        @include _1024 {
+          top: -220px;
+        }
+      }
+
+      &First {
+        left: 33%;
+
+        @include _540 {
+          left: 31%;
+        }
+        @include _1024 {
+          left: 25%;
+        }
+        @include _1440 {
+          left: 30%;
+        }
+      }
+
+      &Second {
+        right: 33%;
+        @include _540 {
+          right: 31%;
+        }
+        @include _1024 {
+          right: 34%;
+        }
+        @include _1440 {
+          right: 30%;
+        }
+      }
+    }
+
+    &__img {
+      position: relative;
+      margin-top: 55px;
+      width: 394px;
+      --current-X: 0%;
+      animation: shake 5s ease-in-out infinite;
+
+      @include _540 {
+        width: 586px;
+        margin-top: 23px;
+      }
+      @include _768 {
+        width: 888px;
+        margin-top: -70px;
+      }
+      @include _1024 {
+        position: absolute;
+        top: 80px;
+        right: 50%;
+        transform: translateX(94%);
+        width: 921px;
+        --current-X: 94%;
+      }
+      @include _1440 {
+        width: 995px;
+        transform: translateX(101%);
+        --current-X: 101%;
+      }
+      @include _1920 {
+        width: 1155px;
+        transform: translateX(91%);
+        --current-X: 91%;
+      }
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translate(calc(25px + var(--current-X))) rotate(0deg);
+        }
+        50% {
+          transform: translate(calc(-25px + var(--current-X))) rotate(4deg);
+        }
+      }
+    }
+
+    &__Info {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 437px;
+      height: 280px;
+      flex-shrink: 0;
+      background-image: url("/../assets/img/decoration/bg-info.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding-top: 45px;
+      @include _540 {
+        width: 657px;
+        height: 433px;
+        padding-top: 75px;
+      }
+      @include _1024 {
+        margin-left: -50px;
+      }
+      @include _1440 {
+        width: 763px;
+        height: 503px;
+        margin-left: 0;
+      }
+    }
+
+    &__Info-logo {
+      width: 152px;
+      @include _540 {
+        width: 286px;
+        margin-top: -10px;
+        margin-bottom: 5px;
+      }
+      @include _1440 {
+        width: 344px;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__Info-aviatorLogo {
+      width: 169px;
+      @include _540 {
+        width: 237px;
+      }
+    }
+
+    &__Info-percentage {
+      font: 400 64px/77px $fontRegular;
+      color: $primary;
+      text-transform: uppercase;
+      text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.5);
+      @include _540 {
+        font-size: 100px;
+        line-height: 120px;
+      }
+      @include _1440 {
+        font-size: 132px;
+        line-height: 159px;
+      }
+
+      & span {
+        font: 400 40px/120% $fontRegular;
+        @include _540 {
+          font-size: 60px;
+          line-height: 120%;
+        }
+        @include _1440 {
+          font-size: 80px;
+        }
+      }
+    }
+
+    &__Info-desc {
+      font: 900 16px/24px $fontBlack;
+      color: $tertiary;
+      text-align: center;
+      text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+      max-width: 293px;
+      margin-bottom: 12px;
+      @include _540 {
+        font-size: 20px;
+        line-height: 30px;
+        max-width: 393px;
+        margin-bottom: 24px;
+      }
+      @include _1440 {
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+
+    button {
+      @include _768 {
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+  }
+}

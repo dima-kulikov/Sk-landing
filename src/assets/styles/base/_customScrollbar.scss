@@ -1,0 +1,12 @@
+::selection {
+  background-color: $primary;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffb823;
+  border-radius: 4px;
+}

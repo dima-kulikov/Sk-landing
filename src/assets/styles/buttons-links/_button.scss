@@ -1,0 +1,101 @@
+.button {
+  position: relative;
+  font: 800 14px/16px $fontExtraBold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $light;
+  width: 260px;
+  padding: 12px;
+  margin-bottom: 16.5px;
+  -webkit-text-stroke: 0.2px rgb(46, 176, 0);
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 0px;
+  border-radius: 4px;
+  background: linear-gradient(
+    180deg,
+    #13cb68 0%,
+    #13cb68 52.59%,
+    #0f9c50 52.6%,
+    #0f9c50 100%
+  );
+  border: none;
+  outline: none;
+  --tw-shadow: 0px 0px 0px rgba(68, 230, 143, 0.8),
+    inset 0px -4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+  @include transition;
+
+  @include hover {
+    outline: none;
+    cursor: pointer;
+    --tw-shadow: 0px 0px 8px rgba(68, 230, 143, 0.8),
+      inset 0px -4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  @include _540 {
+    min-width: 260px;
+    padding: 22px;
+    font-size: 16px;
+    margin-bottom: 22px;
+  }
+
+  &:active {
+    outline: none;
+    background: linear-gradient(
+      180deg,
+      #29a763 0%,
+      #29a763 52.59%,
+      #13904d 52.6%,
+      #13914d 100%
+    );
+    --tw-shadow: 0px 0px 0px rgba(255, 171, 29, 0.8),
+      inset 0px 0px 0px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+  }
+
+  &__svg-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: #3bf18f;
+  }
+  &__svg-2 {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    fill: #3bf18f;
+    transform: rotate(180deg);
+    transition: bottom 0.3s ease;
+  }
+
+  &:active &__svg-2 {
+    bottom: 0;
+  }
+
+  &__svg-3 {
+    position: absolute;
+    right: 15%;
+    height: 40px;
+    fill: linear-gradient(228deg, #929292 -39.65%, #000 86.09%);
+    mix-blend-mode: screen;
+    @include _540 {
+      height: 60px;
+    }
+  }
+}
+
+.button a[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: rgba($dark, 0.5);
+  box-shadow: 4px 4px 0 rgba($dark, 0.5);
+}
+
+.button__svg {
+  fill: linear-gradient(228deg, #929292 -39.65%, #000 86.09%);
+  mix-blend-mode: screen;
+}

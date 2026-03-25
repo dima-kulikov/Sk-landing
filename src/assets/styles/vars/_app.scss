@@ -1,0 +1,71 @@
+// Base
+$transparent: transparent;
+$current: currentColor;
+$light: #fff;
+$primary: #ffb823;
+$secondary: #13cb68;
+$tertiary: #efe6d3;
+
+$dark: #000;
+$dark900: #000;
+
+// $primary: #3effa1; // Solid/Primary
+// $primary100: #3effa1; // Example
+// $secondary: #18675d; // Solid/Secondary
+// $tertiary: #2d6ae2; // Accent/Blue
+// $quaternary: #9f07e7; // Accent/Purple
+// $success: #00a624; // Accent/Green
+// $danger: #c70937; // Accent/Red
+// $accent: #e45d11; // Accent/Orange
+
+$fontRegular: "Ultra-Regular", sans-serif; // 400
+$fontExtraBold: "Montserrat-ExtraBold", sans-serif; //800
+$fontBlack: "Montserrat-Black", sans-serif; //900
+
+$headerHeight: 64px;
+
+@mixin _320 {
+  @media (min-width: 320px) {
+    @content;
+  }
+}
+@mixin _360 {
+  @media (min-width: 360px) {
+    @content;
+  }
+}
+@mixin _375 {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+@mixin _540 {
+  @media (min-width: 540px) {
+    @content;
+  }
+}
+@mixin _768 {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin _1024 {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin _1280 {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+@mixin _1440 {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+@mixin _1920 {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
